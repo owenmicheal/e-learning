@@ -1,11 +1,4 @@
-export const subjects = [
-  "maths",
-  "language",
-  "science",
-  "history",
-  "coding",
-  "economics",
-];
+export const subjects = ["maths", "language", "science", "history", "coding"];
 
 export const subjectsColors = {
   science: "#E5D0FF",
@@ -13,7 +6,6 @@ export const subjectsColors = {
   language: "#BDE7FF",
   coding: "#FFC8E4",
   history: "#FFECC8",
-  economics: "#C8FFDF",
 };
 
 export const voices = {
@@ -61,13 +53,5 @@ export const recentSessions = [
     topic: "World Wars: Causes & Consequences",
     duration: 15,
     color: "#FFECC8",
-  },
-  {
-    id: "6",
-    subject: "economics",
-    name: "The Market Maestro",
-    topic: "The Basics of Supply & Demand",
-    duration: 10,
-    color: "#C8FFDF",
   },
 ];
