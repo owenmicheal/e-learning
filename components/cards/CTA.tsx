@@ -10,7 +10,7 @@ const CTA = () => {
       </h2>
       <p>
         Pick a name, subject, voice & personality and start learning through
-        voice conversations that feel natural and fun.
+        voice conversations.
       </p>
 
       <Image src="/images/cta.svg" alt="cta image" width={362} height={232} />
