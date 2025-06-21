@@ -1,10 +1,23 @@
+import CompanionCard from "@/components/cards/CompanionCard";
+import CompanionsList from "@/components/cards/CompanionsList";
+import CTA from "@/components/CTA";
+
 const Page = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <h1 className="text-2xl underline text-red-600">
-        Welcome To Najji Teach
-      </h1>
-    </div>
+    <main>
+      <h1>Popular Companions</h1>
+
+      <section className="home-section">
+        <CompanionCard />
+        <CompanionCard />
+        <CompanionCard />
+      </section>
+
+      <section className="home-section">
+        <CompanionsList />
+        <CTA />
+      </section>
+    </main>
   );
 };
 
