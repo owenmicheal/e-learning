@@ -1,6 +1,6 @@
 import CompanionCard from "@/components/cards/CompanionCard";
 import CompanionsList from "@/components/cards/CompanionsList";
-import CTA from "@/components/CTA";
+import CTA from "@/components/cards/CTA";
 import { recentSessions } from "@/constants";
 
 const Page = () => {
