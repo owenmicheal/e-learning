@@ -47,9 +47,7 @@ export const getAllCompanions = async ({
 
   const { data: companions, error } = await query;
 
-  if (error) {
-    throw new Error(error.message || "Failed to fetch companions");
-  }
+  if (error) throw new Error(error.message);
 
   return companions;
 };
