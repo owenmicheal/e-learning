@@ -23,6 +23,7 @@ export const createCompanion = async (formData: CreateCompanion) => {
   return data[0];
 };
 
+// gets all companions from the database
 export const getAllCompanions = async ({
   limit = 10,
   page = 1,
@@ -50,4 +51,31 @@ export const getAllCompanions = async ({
   if (error) throw new Error(error.message);
 
   return companions;
+};
+
+// gets a companion by id(single companion)
+export const getCompanion = async (id: string) => {
+  const supabase = createSupabaseClient();
+
+  const { data, error } = await supabase
+    .from("companions")
+    .select()
+    .eq("id", id);
+
+  if (error) console.log("Error fetching companion:", error);
+
+  return data?.[0] || null;
+};
+
+export const addToSessionHistory = async (companionId: string) => {
+  const { userId } = await auth();
+  const supabase = createSupabaseClient();
+  const { data, error } = await supabase.from("session_history").insert({
+    companion_id: companionId,
+    user_id: userId,
+  });
+
+  if (error) throw new Error(error.message);
+
+  return data;
 };
