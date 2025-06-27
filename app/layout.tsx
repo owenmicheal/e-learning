@@ -11,7 +11,7 @@ const bricolage = Bricolage_Grotesque({
 
 export const metadata: Metadata = {
   title: "Najji-Teach",
-  description: "Real-time AI Teaching Platform",
+  description: "A Real-time AI Teaching Platform",
 };
 
 export default function RootLayout({
