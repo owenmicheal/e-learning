@@ -1,14 +1,12 @@
-import CompanionComponent from "@/components/CompanionComponent";
 import { getCompanion } from "@/lib/actions/companion.actions";
-import { getSubjectColor } from "@/lib/utils";
 import { currentUser } from "@clerk/nextjs/server";
-import Image from "next/image";
 import { redirect } from "next/navigation";
+import { getSubjectColor } from "@/lib/utils";
+import Image from "next/image";
+import CompanionComponent from "@/components/CompanionComponent";
 
 interface CompanionSessionPageProps {
-  params: Promise<{
-    id: string;
-  }>;
+  params: Promise<{ id: string }>;
 }
 
 const CompanionSession = async ({ params }: CompanionSessionPageProps) => {
@@ -42,7 +40,6 @@ const CompanionSession = async ({ params }: CompanionSessionPageProps) => {
               <p className="font-bold text-2xl">{name}</p>
               <div className="subject-badge max-sm:hidden">{subject}</div>
             </div>
-
             <p className="text-lg">{topic}</p>
           </div>
         </div>
